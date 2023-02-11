@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
 
 //import kotlinx.android.synthetic.main.activity_main.*
@@ -19,9 +20,16 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.button4.setOnClickListener {
+            val userName = binding.nameInput.text.toString()
+            val password = binding.passwordInput.text.toString()
+
+            Toast.makeText(this, "Name: $userName, password: $password", Toast.LENGTH_LONG).show()
+        }
+
         //grabbing objects by id
 //        container = findViewById<LinearLayout>(R.id.linearLayout)
-        container = findViewById(R.id.linearLayout)
+//        container = findViewById(R.id.linearLayout)
 
 
         addTextView(getString(R.string.hello))
@@ -35,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         view.text = label
         view.textSize = 28f
         view.setTextColor(Color.parseColor("#ff0000"))
-        binding.linearLayout.addView(view)
+//        binding.linearLayout.addView(view)
         //video 5 get view references by findViewById
 //        container.addView(view)
     }

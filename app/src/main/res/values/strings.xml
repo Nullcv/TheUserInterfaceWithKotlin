@@ -3,4 +3,7 @@
     <string name="hello">Hello</string>
     <string name="from">From</string>
     <string name="android">Android</string>
+    <string name="your_name">Your Name</string>
+    <string name="password">password</string>
+    <string name="click_me">Click Me</string>
 </resources>
