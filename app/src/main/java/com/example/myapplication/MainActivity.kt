@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         container = findViewById(R.id.linearLayout)
 
 
-        addTextView("Hello")
-        addTextView("From")
-        addTextView("Kotlin")
+        addTextView(getString(R.string.hello))
+        addTextView(getString(R.string.from))
+        addTextView(getString(R.string.android))
 
     }
 
