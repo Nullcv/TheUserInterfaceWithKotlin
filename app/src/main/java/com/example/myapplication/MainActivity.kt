@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 //import kotlinx.android.synthetic.main.activity_main.*
 private lateinit var binding: ActivityMainBinding
@@ -25,7 +26,10 @@ class MainActivity : AppCompatActivity() {
             val password = binding.passwordInput.text.toString()
             val message = getString(R.string.login_message, userName, password)
 
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+//            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+            Snackbar.make(it, message, Snackbar.LENGTH_LONG)
+            .setAction("Click me", {showAnotherMessage()})
+            .show()
         }
 
         //grabbing objects by id
@@ -37,6 +41,10 @@ class MainActivity : AppCompatActivity() {
         addTextView(getString(R.string.from))
         addTextView(getString(R.string.android))
 
+    }
+
+    private fun showAnotherMessage() {
+        Toast.makeText(this, "you clicked", Toast.LENGTH_LONG).show()
     }
 
     private fun addTextView(label: String) {
