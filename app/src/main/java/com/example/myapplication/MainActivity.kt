@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity() {
         binding.button4.setOnClickListener {
             val userName = binding.nameInput.text.toString()
             val password = binding.passwordInput.text.toString()
+            val message = getString(R.string.login_message, userName, password)
 
-            Toast.makeText(this, "Name: $userName, password: $password", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show()
         }
 
         //grabbing objects by id
